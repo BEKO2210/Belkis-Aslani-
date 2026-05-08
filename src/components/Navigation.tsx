@@ -65,8 +65,8 @@ export function Navigation() {
           : "bg-transparent"
       }`}
     >
-      <div className="container-pad flex h-16 items-center justify-between">
-        <a href="#top" className="group flex items-center gap-3">
+      <div className="container-pad flex h-16 items-center justify-between gap-3">
+        <a href="#top" className="group flex min-w-0 items-center gap-3">
           <span className="relative inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-full ring-1 ring-white/15 transition group-hover:ring-accent-cyan/60">
             {/* Always-rendered fallback mark, sits behind portrait */}
             <span className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-accent-cyan to-accent-violet text-[13px] font-bold text-ink-950">
@@ -86,7 +86,7 @@ export function Navigation() {
               className="absolute inset-0 bg-gradient-to-br from-accent-cyan/30 via-transparent to-accent-violet/30 opacity-0 transition group-hover:opacity-100"
             />
           </span>
-          <span className="font-display text-sm font-semibold tracking-tight text-bone">
+          <span className="truncate font-display text-sm font-semibold tracking-tight text-bone">
             Belkis Aslani
           </span>
           <span className="ml-1 hidden h-4 items-center font-mono text-[10px] uppercase tracking-[0.25em] text-white/40 sm:inline-flex">
@@ -120,8 +120,8 @@ export function Navigation() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-2">
-          <a href="#kontakt" className="hidden btn-primary md:inline-flex">
+        <div className="flex shrink-0 items-center gap-2">
+          <a href="#kontakt" className="btn-primary hidden md:inline-flex">
             Projekt anfragen
           </a>
           <button

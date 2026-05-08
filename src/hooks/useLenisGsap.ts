@@ -19,6 +19,13 @@ export function useLenisGsap(enabled: boolean = true): void {
     ).matches;
     if (prefersReduced) return;
 
+    // Native scroll on touch devices and small viewports — Lenis wheel
+    // smoothing fights iOS momentum scrolling and causes jank on phones.
+    const isTouch =
+      window.matchMedia("(hover: none) and (pointer: coarse)").matches ||
+      window.matchMedia("(max-width: 767px)").matches;
+    if (isTouch) return;
+
     const lenis = new Lenis({
       duration: 1.1,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),

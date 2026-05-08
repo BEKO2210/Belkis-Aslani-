@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export function CTASection() {
   return (
-    <section id="kontakt" className="relative py-28 md:py-36">
+    <section id="kontakt" className="relative py-16 sm:py-20 md:py-36">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10"
@@ -18,7 +18,7 @@ export function CTASection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-15% 0px" }}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-          className="card-glow relative overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-br from-ink-900/95 via-ink-900/70 to-ink-950/95 px-6 py-14 backdrop-blur-md md:px-16 md:py-20"
+          className="card-glow relative overflow-hidden rounded-[28px] border border-white/10 bg-gradient-to-br from-ink-900/95 via-ink-900/70 to-ink-950/95 px-5 py-10 backdrop-blur-md sm:rounded-[32px] sm:px-8 sm:py-14 md:px-16 md:py-20"
         >
           {/* Ambient glows */}
           <div
@@ -31,13 +31,13 @@ export function CTASection() {
           />
           <div aria-hidden className="absolute inset-0 grid-bg mask-fade-b opacity-30" />
 
-          <div className="relative z-10 grid items-center gap-12 md:grid-cols-[1.4fr_1fr]">
+          <div className="relative z-10 grid items-center gap-10 sm:gap-12 md:grid-cols-[1.4fr_1fr]">
             <div>
               <span className="eyebrow">
                 <span className="h-1.5 w-1.5 rounded-full bg-accent-cyan animate-pulse-slow" />
                 Kontakt
               </span>
-              <h2 className="mt-6 font-display text-[36px] font-semibold leading-[1.02] tracking-tight text-bone sm:text-[48px] md:text-[60px]">
+              <h2 className="mt-6 font-display text-[28px] font-semibold leading-[1.05] tracking-tight text-bone xs:text-[32px] sm:text-[48px] md:text-[60px]">
                 Lass uns dein&nbsp;
                 <span className="text-gradient">nächstes System</span>{" "}
                 bauen.
@@ -69,33 +69,33 @@ export function CTASection() {
                   href="mailto:belkis.aslani@gmail.com"
                   className="group flex items-center gap-3 rounded-2xl border border-white/8 bg-white/[0.02] px-4 py-3 transition hover:border-white/20 hover:bg-white/[0.04]"
                 >
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-accent-cyan/15 text-accent-cyan">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent-cyan/15 text-accent-cyan">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
                       <rect x="3" y="5" width="18" height="14" rx="2" />
                       <path d="M3 7l9 7 9-7" />
                     </svg>
                   </span>
-                  <div>
+                  <div className="min-w-0">
                     <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-white/45">
                       E-Mail
                     </div>
-                    <div className="text-bone">belkis.aslani@gmail.com</div>
+                    <div className="truncate text-bone">belkis.aslani@gmail.com</div>
                   </div>
                 </a>
                 <a
                   href="tel:+4917681462526"
                   className="group flex items-center gap-3 rounded-2xl border border-white/8 bg-white/[0.02] px-4 py-3 transition hover:border-white/20 hover:bg-white/[0.04]"
                 >
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-accent-violet/15 text-accent-violet">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent-violet/15 text-accent-violet">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
                       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13 1 .37 1.97.72 2.9a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.18-1.18a2 2 0 0 1 2.11-.45c.93.35 1.9.59 2.9.72a2 2 0 0 1 1.72 2z" />
                     </svg>
                   </span>
-                  <div>
+                  <div className="min-w-0">
                     <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-white/45">
                       Telefon
                     </div>
-                    <div className="text-bone">+49 176 81462526</div>
+                    <div className="truncate text-bone">+49 176 81462526</div>
                   </div>
                 </a>
               </div>
@@ -103,7 +103,7 @@ export function CTASection() {
 
             {/* Side panel — availability */}
             <div className="relative">
-              <div className="glass rounded-3xl p-7">
+              <div className="glass rounded-3xl p-5 sm:p-7">
                 <div className="flex items-center justify-between">
                   <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-white/55">
                     Verfügbarkeit

@@ -15,7 +15,7 @@ export const Sun = forwardRef<HTMLDivElement>(function Sun(_props, ref) {
     <div
       ref={ref}
       data-sun
-      className="pointer-events-none absolute left-[8%] top-[10%] h-[280px] w-[280px]"
+      className="pointer-events-none absolute left-[6%] top-[8%] h-[170px] w-[170px] sm:left-[8%] sm:top-[10%] sm:h-[220px] sm:w-[220px] md:h-[280px] md:w-[280px]"
     >
       {/* Outer corona halo */}
       <div
