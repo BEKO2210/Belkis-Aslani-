@@ -20,7 +20,7 @@ const pillars = [
 
 export function PositioningSection() {
   return (
-    <section id="positionierung" className="relative py-28 md:py-36">
+    <section id="positionierung" className="relative py-16 sm:py-20 md:py-36">
       {/* Backdrop */}
       <div
         aria-hidden
@@ -43,7 +43,7 @@ export function PositioningSection() {
             <span className="h-1.5 w-1.5 rounded-full bg-accent-violet" />
             Positionierung
           </span>
-          <h2 className="mt-6 font-display text-[36px] font-semibold leading-[1.05] tracking-tight text-bone sm:text-[48px] md:text-[56px]">
+          <h2 className="mt-6 font-display text-[28px] font-semibold leading-[1.08] tracking-tight text-bone xs:text-[32px] sm:text-[48px] md:text-[56px]">
             Ich baue digitale Marken, die&nbsp;
             <span className="text-gradient">denken, glühen und konvertieren.</span>
           </h2>

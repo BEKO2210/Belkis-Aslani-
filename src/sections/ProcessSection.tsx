@@ -46,7 +46,7 @@ const steps: ProcessStep[] = [
 
 export function ProcessSection() {
   return (
-    <section id="prozess" className="relative py-28 md:py-36">
+    <section id="prozess" className="relative py-16 sm:py-20 md:py-36">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10"
@@ -68,7 +68,7 @@ export function ProcessSection() {
             <span className="h-1.5 w-1.5 rounded-full bg-accent-cyan" />
             Prozess
           </span>
-          <h2 className="mt-6 font-display text-[36px] font-semibold leading-[1.05] tracking-tight text-bone sm:text-[44px] md:text-[52px]">
+          <h2 className="mt-6 font-display text-[28px] font-semibold leading-[1.08] tracking-tight text-bone xs:text-[32px] sm:text-[44px] md:text-[52px]">
             Vom ersten Call zum&nbsp;
             <span className="text-gradient">lebendigen System</span>{" "}
             in 5 Schritten.

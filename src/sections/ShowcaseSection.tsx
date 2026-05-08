@@ -73,7 +73,7 @@ const items: ShowcaseItem[] = [
 
 export function ShowcaseSection() {
   return (
-    <section id="showcase" className="relative py-28 md:py-36">
+    <section id="showcase" className="relative py-16 sm:py-20 md:py-36">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10"
@@ -96,7 +96,7 @@ export function ShowcaseSection() {
               <span className="h-1.5 w-1.5 rounded-full bg-accent-violet" />
               Showcase
             </span>
-            <h2 className="mt-6 font-display text-[36px] font-semibold leading-[1.05] tracking-tight text-bone sm:text-[44px] md:text-[52px]">
+            <h2 className="mt-6 font-display text-[28px] font-semibold leading-[1.08] tracking-tight text-bone xs:text-[32px] sm:text-[44px] md:text-[52px]">
               Echte&nbsp;
               <span className="text-gradient">Projekte &amp; Open Source</span>.
             </h2>

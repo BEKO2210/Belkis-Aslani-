@@ -14,7 +14,7 @@ export const Moon = forwardRef<HTMLDivElement>(function Moon(_props, ref) {
     <div
       ref={ref}
       data-moon
-      className="pointer-events-none absolute right-[10%] top-[8%] h-[240px] w-[240px]"
+      className="pointer-events-none absolute right-[6%] top-[6%] h-[150px] w-[150px] sm:right-[10%] sm:top-[8%] sm:h-[200px] sm:w-[200px] md:h-[240px] md:w-[240px]"
     >
       {/* Atmospheric outer halo */}
       <div

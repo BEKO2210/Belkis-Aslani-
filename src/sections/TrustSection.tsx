@@ -50,7 +50,7 @@ const accentMap = {
 
 export function TrustSection() {
   return (
-    <section id="trust" className="relative py-28 md:py-36">
+    <section id="trust" className="relative py-16 sm:py-20 md:py-36">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 grid-bg mask-fade-b opacity-30"
@@ -68,7 +68,7 @@ export function TrustSection() {
             <span className="h-1.5 w-1.5 rounded-full bg-accent-rose" />
             Trust
           </span>
-          <h2 className="mt-6 font-display text-[36px] font-semibold leading-[1.05] tracking-tight text-bone sm:text-[44px] md:text-[52px]">
+          <h2 className="mt-6 font-display text-[28px] font-semibold leading-[1.08] tracking-tight text-bone xs:text-[32px] sm:text-[44px] md:text-[52px]">
             Zahlen, Stack &amp;{" "}
             <span className="text-gradient">echte Stimmen.</span>
           </h2>
@@ -96,16 +96,16 @@ export function TrustSection() {
         </div>
 
         {/* Stack badges */}
-        <div className="mt-12 overflow-hidden">
+        <div className="relative mt-12 overflow-hidden">
           <div
             aria-hidden
-            className="pointer-events-none absolute left-0 z-10 h-12 w-24 bg-gradient-to-r from-ink-950 to-transparent"
+            className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-ink-950 to-transparent sm:w-24"
           />
           <div
             aria-hidden
-            className="pointer-events-none absolute right-0 z-10 h-12 w-24 bg-gradient-to-l from-ink-950 to-transparent"
+            className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-ink-950 to-transparent sm:w-24"
           />
-          <div className="flex animate-marquee gap-3 whitespace-nowrap will-change-transform">
+          <div className="flex w-max animate-marquee gap-3 whitespace-nowrap will-change-transform">
             {[...trustBadges, ...trustBadges].map((b, i) => (
               <span
                 key={i}

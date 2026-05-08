@@ -32,7 +32,7 @@ const groups = [
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-white/8 bg-ink-950 pt-20 pb-10">
+    <footer className="relative overflow-hidden border-t border-white/8 bg-ink-950 pt-12 pb-10 sm:pt-16 md:pt-20">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-x-0 top-0 h-px"
@@ -55,7 +55,7 @@ export function Footer() {
       />
 
       <div className="container-pad relative">
-        <div className="grid gap-12 lg:grid-cols-[1.4fr_2fr]">
+        <div className="grid gap-10 lg:grid-cols-[1.4fr_2fr]">
           <div>
             <a href="#top" className="inline-flex items-center gap-3">
               <span className="relative inline-flex h-10 w-10 items-center justify-center overflow-hidden rounded-full ring-1 ring-white/15">
@@ -119,7 +119,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 xs:grid-cols-2 sm:grid-cols-3">
             {groups.map((g) => (
               <div key={g.label}>
                 <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-white/45">
@@ -127,10 +127,10 @@ export function Footer() {
                 </div>
                 <ul className="mt-4 space-y-2.5 text-[14px]">
                   {g.links.map((l) => (
-                    <li key={l.label}>
+                    <li key={l.label} className="break-words">
                       <a
                         href={l.href}
-                        className="text-white/70 transition hover:text-bone"
+                        className="break-all text-white/70 transition hover:text-bone"
                       >
                         {l.label}
                       </a>
@@ -204,15 +204,15 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-white/8 pt-5 text-[12px] text-white/45 md:flex-row md:items-center">
-          <div className="flex items-center gap-3">
+        <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-white/8 pt-5 text-[12px] leading-relaxed text-white/45 md:flex-row md:items-center">
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
             <span>© {new Date().getFullYear()} Belkis Aslani — Made with Claude Code.</span>
             <span aria-hidden className="hidden h-1 w-1 rounded-full bg-accent-cyan md:inline-block" />
             <span className="hidden font-mono uppercase tracking-[0.25em] md:inline">
               v1.0 — cinematic
             </span>
           </div>
-          <div className="flex items-center gap-5">
+          <div className="md:max-w-[60%] md:text-right">
             <span>Verantwortlich i.S.d. § 18 Abs. 2 MStV: Belkis Aslani, Vogelsangstr. 32, 71691 Freiberg am Neckar</span>
           </div>
         </div>

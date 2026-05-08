@@ -22,7 +22,7 @@ const features = [
 
 export function NeuroBrainSection() {
   return (
-    <section id="neurobrain" className="relative py-28 md:py-36">
+    <section id="neurobrain" className="relative py-16 sm:py-20 md:py-36">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 grid-bg mask-fade-b opacity-40"
@@ -37,7 +37,7 @@ export function NeuroBrainSection() {
       />
 
       <div className="container-pad">
-        <div className="grid items-center gap-16 lg:grid-cols-2">
+        <div className="grid items-center gap-10 md:gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
             <motion.div
               initial={{ opacity: 0, y: 24 }}
@@ -49,7 +49,7 @@ export function NeuroBrainSection() {
                 <span className="h-1.5 w-1.5 rounded-full bg-accent-cyan animate-pulse-slow" />
                 Neurobrain
               </span>
-              <h2 className="mt-6 font-display text-[36px] font-semibold leading-[1.05] tracking-tight text-bone sm:text-[44px] md:text-[52px]">
+              <h2 className="mt-6 font-display text-[28px] font-semibold leading-[1.08] tracking-tight text-bone xs:text-[32px] sm:text-[44px] md:text-[52px]">
                 Ein <span className="text-gradient">denkendes Interface</span>{" "}
                 für deine Marke.
               </h2>
@@ -97,7 +97,7 @@ export function NeuroBrainSection() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-10% 0px" }}
             transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
-            className="relative mx-auto aspect-square w-full max-w-[560px]"
+            className="relative mx-auto aspect-square w-full max-w-[320px] sm:max-w-[440px] md:max-w-[560px]"
           >
             {/* Outer halo */}
             <div

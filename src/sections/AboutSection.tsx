@@ -117,7 +117,7 @@ export function AboutSection() {
   const [imgOk, setImgOk] = useState(true);
 
   return (
-    <section id="ueber-mich" className="relative py-28 md:py-36">
+    <section id="ueber-mich" className="relative py-16 sm:py-20 md:py-36">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10"
@@ -135,7 +135,7 @@ export function AboutSection() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-15% 0px" }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-            className="relative mx-auto aspect-square w-full max-w-[460px] lg:sticky lg:top-24"
+            className="relative mx-auto aspect-square w-full max-w-[320px] sm:max-w-[400px] md:max-w-[460px] lg:sticky lg:top-24"
           >
             <div
               aria-hidden
@@ -197,7 +197,7 @@ export function AboutSection() {
                 <span className="h-1.5 w-1.5 rounded-full bg-accent-amber" />
                 Über mich
               </span>
-              <h2 className="mt-6 font-display text-[36px] font-semibold leading-[1.05] tracking-tight text-bone sm:text-[44px] md:text-[52px]">
+              <h2 className="mt-6 font-display text-[28px] font-semibold leading-[1.08] tracking-tight text-bone xs:text-[32px] sm:text-[44px] md:text-[52px]">
                 Hi, ich bin&nbsp;
                 <span className="text-gradient">Belkis</span>.<br />
                 Ich code mit AI — und für AI.

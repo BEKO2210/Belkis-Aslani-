@@ -86,11 +86,13 @@ export function HeroScrollScene() {
         .to(shootingStar, { x: 600, y: 220, duration: 1.4, ease: "power2.in" }, 0)
         .to(shootingStar, { opacity: 0, duration: 0.4 }, 1.0);
 
+      const isMobile = window.matchMedia("(max-width: 767px)").matches;
+
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: root,
           start: "top top",
-          end: "+=200%",
+          end: isMobile ? "+=120%" : "+=200%",
           scrub: 0.5,
           pin: true,
           pinSpacing: true,
@@ -240,7 +242,7 @@ export function HeroScrollScene() {
     <section
       ref={rootRef}
       id="top"
-      className="relative h-screen w-full overflow-hidden"
+      className="relative h-[100svh] min-h-[560px] w-full overflow-hidden"
       aria-label="Belkis Aslani — cinematischer Hero von Tag zu Nacht"
     >
       <div ref={sceneRef} className="relative h-full w-full">
@@ -372,15 +374,16 @@ export function HeroScrollScene() {
           <div className="relative z-10 flex h-full w-full items-center">
             <div className="container-pad">
               <div className="max-w-2xl">
-                <span className="eyebrow mb-6">
+                <span className="eyebrow mb-4 sm:mb-6">
                   <span className="h-1.5 w-1.5 rounded-full bg-accent-cyan shadow-glow" />
-                  Belkis Aslani · AI-Coder &amp; Premium-Webentwicklung
+                  <span className="hidden sm:inline">Belkis Aslani · AI-Coder &amp; Premium-Webentwicklung</span>
+                  <span className="sm:hidden">Belkis Aslani · AI-Coder</span>
                 </span>
 
-                <div className="relative h-[260px] sm:h-[280px] md:h-[320px]">
+                <div className="relative h-[200px] sm:h-[260px] md:h-[320px]">
                   <h1
                     data-headline-day
-                    className="absolute inset-0 font-display text-[40px] leading-[1.05] sm:text-[56px] md:text-[72px] font-semibold tracking-tight text-bone"
+                    className="absolute inset-0 font-display text-[32px] leading-[1.05] xs:text-[36px] sm:text-[52px] md:text-[72px] font-semibold tracking-tight text-bone"
                   >
                     Ich baue
                     <br />
@@ -390,7 +393,7 @@ export function HeroScrollScene() {
                   </h1>
                   <h1
                     data-headline-night
-                    className="absolute inset-0 font-display text-[40px] leading-[1.05] sm:text-[56px] md:text-[72px] font-semibold tracking-tight text-bone"
+                    className="absolute inset-0 font-display text-[32px] leading-[1.05] xs:text-[36px] sm:text-[52px] md:text-[72px] font-semibold tracking-tight text-bone"
                   >
                     Ich baue
                     <br />
@@ -402,7 +405,7 @@ export function HeroScrollScene() {
 
                 <p
                   data-sub
-                  className="mt-6 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg"
+                  className="mt-5 max-w-xl text-[14px] leading-relaxed text-white/70 sm:mt-6 sm:text-base md:text-lg"
                   style={{ opacity: reduced ? 1 : 0.6, transform: "translateY(8px)" }}
                 >
                   Premium-Websites, AI-Tools und automatisierte Workflows. Vom
@@ -412,7 +415,7 @@ export function HeroScrollScene() {
 
                 <div
                   data-ctas
-                  className="mt-8 flex flex-wrap items-center gap-3"
+                  className="mt-6 flex flex-wrap items-center gap-2.5 sm:mt-8 sm:gap-3"
                   style={{ opacity: reduced ? 1 : 0, transform: "translateY(8px)" }}
                 >
                   <a href="#kontakt" className="btn-primary">
@@ -437,7 +440,7 @@ export function HeroScrollScene() {
           {/* Scroll hint */}
           <div
             data-scroll-hint
-            className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-white/55"
+            className="pointer-events-none absolute inset-x-0 bottom-[max(1rem,env(safe-area-inset-bottom))] z-10 hidden flex-col items-center gap-2 text-white/55 sm:flex"
           >
             <span className="font-mono text-[10px] uppercase tracking-[0.3em]">
               Scroll · Tag → Nacht
