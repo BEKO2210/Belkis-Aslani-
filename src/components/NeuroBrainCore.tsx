@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { useReducedMotion } from "../hooks/useReducedMotion";
+import { useIsMobile } from "../hooks/useIsMobile";
 
 interface Node {
   id: number;
@@ -43,10 +44,11 @@ const COLORS = {
 
 export function NeuroBrainCore() {
   const reduced = useReducedMotion();
+  const isMobile = useIsMobile();
   const ref = useRef<SVGSVGElement>(null);
 
   useEffect(() => {
-    if (reduced) return;
+    if (reduced || isMobile) return;
     const svg = ref.current;
     if (!svg) return;
 
@@ -115,7 +117,7 @@ export function NeuroBrainCore() {
     }, svg);
 
     return () => ctx.revert();
-  }, [reduced]);
+  }, [reduced, isMobile]);
 
   return (
     <svg
