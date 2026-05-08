@@ -218,3 +218,24 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* Mobile / touch — disable expensive GPU effects that hang phones.
+   `backdrop-filter: blur(...)` is the single biggest scroll-jank source
+   on mid-range Android. We trade a tiny bit of glass-look for a working
+   site. CSS marquees and stream animations also get nuked since they
+   run forever and continuously paint. */
+@media (max-width: 767px), (hover: none) and (pointer: coarse) {
+  *,
+  *::before,
+  *::after {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  .animate-marquee,
+  .animate-stream-down,
+  .animate-pulse-slow,
+  .animate-flicker {
+    animation: none !important;
+  }
+}

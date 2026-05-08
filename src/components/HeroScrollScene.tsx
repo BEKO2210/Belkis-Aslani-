@@ -5,28 +5,26 @@ import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import { Sun } from "./Sun";
 import { Moon } from "./Moon";
 import { ShaderAurora } from "./ShaderAurora";
-import { SkyImageSequence, SKY_FRAME_COUNT } from "./SkyImageSequence";
+import { SkyImageSequence } from "./SkyImageSequence";
+import { HeroMobile } from "./HeroMobile";
 import { useReducedMotion } from "../hooks/useReducedMotion";
+import { useIsMobile } from "../hooks/useIsMobile";
 
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
 /**
  * Cinematic Day → Sunset → Night hero — Premium Edition.
- * - Sonne mit Korona, Granulation und Solarflares
- * - Mond mit Kratern, Maria und Atmosphären-Halo
- * - Three.js Aurora-Shader im Nacht-Modus (FBM, 35 Layer)
- * - 130 Sterne mit Twinkling
- * - Stadt-Lichter staggered, Antennen blinken
- * - Headline-Switch mit Scale + Blur
- * - Subtile Camera-Zoom-In Richtung Nacht
+ * Renders a static <HeroMobile /> on phones to avoid GPU/scroll jank.
  */
 export function HeroScrollScene() {
   const reduced = useReducedMotion();
+  const isMobile = useIsMobile();
   const rootRef = useRef<HTMLDivElement>(null);
   const sceneRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (reduced) return;
+    if (isMobile) return;
     const root = rootRef.current;
     const scene = sceneRef.current;
     if (!root || !scene) return;
@@ -236,7 +234,9 @@ export function HeroScrollScene() {
     }, root);
 
     return () => ctx.revert();
-  }, [reduced]);
+  }, [reduced, isMobile]);
+
+  if (isMobile) return <HeroMobile />;
 
   return (
     <section
