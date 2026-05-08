@@ -11,7 +11,9 @@
  * Komposition pixelgenau gleich, der User wollte das explizit so.
  */
 
-const BASE = "/images/sky/scene.jpg";
+import { asset } from "../lib/asset";
+
+const BASE = asset("/images/sky/scene.jpg");
 
 // 28 fein abgestufte Tageszeit-Frames. Jeder Step ist eine kleine
 // Verschiebung, damit der Crossfade beim Scrollen flüssig wirkt.

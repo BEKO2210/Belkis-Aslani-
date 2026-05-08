@@ -1,3 +1,5 @@
+import { asset } from "../lib/asset";
+
 const groups = [
   {
     label: "Leistungen",
@@ -61,7 +63,7 @@ export function Footer() {
                   B
                 </span>
                 <img
-                  src="/images/portrait.jpg"
+                  src={asset("/images/portrait.jpg")}
                   alt=""
                   className="absolute inset-0 h-full w-full object-cover"
                   onError={(e) => {

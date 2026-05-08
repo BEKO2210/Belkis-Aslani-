@@ -1,4 +1,5 @@
 import { forwardRef } from "react";
+import { asset } from "../lib/asset";
 
 /**
  * Echtes Foto der Sonne — NASA Solar Dynamics Observatory (Public Domain).
@@ -46,7 +47,7 @@ export const Sun = forwardRef<HTMLDivElement>(function Sun(_props, ref) {
         }}
       >
         <img
-          src="/images/sun.jpg"
+          src={asset("/images/sun.jpg")}
           alt="Die Sonne — NASA Solar Dynamics Observatory"
           className="h-full w-full select-none"
           style={{

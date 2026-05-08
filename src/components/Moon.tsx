@@ -1,4 +1,5 @@
 import { forwardRef } from "react";
+import { asset } from "../lib/asset";
 
 /**
  * Echtes Foto des Mondes — Wikimedia Commons (Public Domain).
@@ -45,7 +46,7 @@ export const Moon = forwardRef<HTMLDivElement>(function Moon(_props, ref) {
         }}
       >
         <img
-          src="/images/moon.jpg"
+          src={asset("/images/moon.jpg")}
           alt="Vollmond — Wikimedia Commons"
           className="h-full w-full select-none"
           style={{

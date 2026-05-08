@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { TechMarquee, type TechItem } from "../components/TechMarquee";
+import { asset } from "../lib/asset";
 
 const FACTS = [
   { label: "Standort", value: "Freiberg am Neckar · Remote DACH" },
@@ -157,7 +158,7 @@ export function AboutSection() {
 
               {imgOk && (
                 <img
-                  src="/images/portrait.jpg"
+                  src={asset("/images/portrait.jpg")}
                   alt="Belkis Aslani — Portrait"
                   className="absolute inset-0 h-full w-full select-none object-cover"
                   draggable={false}

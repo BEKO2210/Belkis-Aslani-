@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { asset } from "../lib/asset";
 
 const links = [
   { href: "#ueber-mich", label: "Über mich" },
@@ -73,7 +74,7 @@ export function Navigation() {
             </span>
             {portraitOk && (
               <img
-                src="/images/portrait.jpg"
+                src={asset("/images/portrait.jpg")}
                 alt="Belkis Aslani"
                 className="absolute inset-0 h-full w-full select-none object-cover"
                 draggable={false}
